@@ -1,0 +1,23 @@
+{
+  "name": "react-proshop",
+  "version": "1.0.0",
+  "description": "MERN shopping app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcinBalejko/React-ProShop.git"
+  },
+  "author": "Marcin Balejko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarcinBalejko/React-ProShop/issues"
+  },
+  "homepage": "https://github.com/MarcinBalejko/React-ProShop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
