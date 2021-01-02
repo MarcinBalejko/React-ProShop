@@ -1,4 +1,3 @@
-const { match } = require("assert");
 const express = require("express");
 const products = require("./data/products");
 
