@@ -17,8 +17,6 @@ const ProductScreen = ({ match }) => {
     fetchProduct();
   }, [match.params.id]);
 
-  // just 'match' would also be ok
-
   return (
     <>
       <Link className="btn btn-light my-3" to="/">
