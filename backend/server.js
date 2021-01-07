@@ -2,7 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import colors from "colors";
 import connectDB from "./config/db.js";
-import products from "./data/products.js";
+
+import productRoutes from "./routes/productRoutes.js";
 
 // From now on, using node modules ^^^
 // const express = require("express");
@@ -18,6 +19,8 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
+
+app.use("/api/products", productRoutes);
 
 // GET All products
 app.get("/api/products", (req, res) => {
