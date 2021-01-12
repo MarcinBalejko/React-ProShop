@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
+import Loader from "../components/Loader";
 import { listProducts } from "../actions/productActions";
 
 // ^^^In previous redux projects I used high order method 'connect',
@@ -22,7 +23,7 @@ const HomeScreen = () => {
     <>
       <h1>Latest Products</h1>
       {loading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
         <h3>{error}</h3>
       ) : (
