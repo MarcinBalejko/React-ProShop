@@ -7,7 +7,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 
-const App = (props) => {
+const App = () => {
   return (
     <Router>
       <>
@@ -16,7 +16,7 @@ const App = (props) => {
           <Container>
             <Route path="/" component={HomeScreen} exact />
             <Route path="/product/:id" component={ProductScreen} />
-            <Router path="/cart/:id?/" component={CartScreen} />
+            <Route path="/cart/:id?" component={CartScreen} />
           </Container>
         </main>
         <Footer />
