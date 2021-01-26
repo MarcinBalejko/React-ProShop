@@ -5,11 +5,7 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
 
 import productRoutes from "./routes/productRoutes.js";
-
-// From now on, using node modules ^^^
-// const express = require("express");
-// const dotenv = require("dotenv");
-// const products = require("./data/products");
+import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
 
@@ -17,26 +13,17 @@ connectDB();
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
 app.use("/api/products", productRoutes);
+app.use("/api/users", userRoutes);
 
 app.use(notFound);
-
 app.use(errorHandler);
-
-// GET All products
-app.get("/api/products", (req, res) => {
-  res.json(products);
-});
-
-// GET Product by ID
-app.get("/api/products/:id", (req, res) => {
-  const product = products.find((p) => p._id === req.params.id);
-  res.json(product);
-});
 
 const PORT = process.env.PORT || 5000;
 
