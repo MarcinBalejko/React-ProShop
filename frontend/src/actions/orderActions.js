@@ -66,7 +66,6 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    // no content type in config cause it's a get request
 
     const { data } = await axios.get(`/api/orders/${id}`, config);
 
@@ -128,7 +127,6 @@ export const payOrder = (orderId, paymentResult) => async (
 };
 
 export const listMyOrders = () => async (dispatch, getState) => {
-  // it knows who we are by token
   try {
     dispatch({
       type: ORDER_LIST_MY_REQUEST,

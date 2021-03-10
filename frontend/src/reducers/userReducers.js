@@ -60,8 +60,6 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
       return state;
   }
 };
-// case USER_DETAILS_RESET:
-//   return { user: {} }
 
 export const userUpdateProfileReducer = (state = {}, action) => {
   switch (action.type) {

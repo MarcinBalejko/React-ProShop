@@ -8,8 +8,6 @@ import Product from "./models/productModel.js";
 import Order from "./models/orderModel.js";
 import connectDB from "./config/db.js";
 
-// MONGO_URI is in .env so we need to import dotenv
-
 dotenv.config();
 
 connectDB();
